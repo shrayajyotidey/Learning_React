@@ -3,6 +3,10 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Heading from './components/Heading'
+import List from './components/List'
+import Paragraph from './components/Paragraph'
+
 
 let fname = "S";
 let lname = "DEY";
@@ -23,23 +27,43 @@ customCss.justifyContent = "center";
 // customCss.paddingLeft = "30px";
 // customCss.marginLeft = "30px";
 
+let date = new Date();
+// let date = new Date(2026,9,14,0);   //added to test other scenarios 
+let n = date.toLocaleString([], {
+  hour: "2-digit",
+  minute: "2-digit"
+})
+console.log(n)
+
+const custGreet = {
+};
+
+let hour = date.getHours();
+let greeting = "";
+
+if (hour >= 0 && hour < 12) {
+  greeting = "Good Morning!";
+  custGreet.color = "red";
+} else if (hour >= 12 && hour < 18) {
+  greeting = "Good Afternoon!";
+  custGreet.color = "green";
+} else {
+  greeting = "Good Evening!";
+  custGreet.color = "blue";
+}
+console.log(greeting)
+
 function App() {
   const [count, setCount] = useState(0)
   return (
-    // <div>
-    //   {/* <h1>My Favourite Foods</h1>
-    //   <ul>
-    //     <li>Luchi</li>
-    //     <li>Kachuri</li>
-    //     <li>Alur Dam</li>
-    //   </ul> */}
-    //     {/* <h1>Helo {fname +" "+ lname}</h1> */}
-    //     <h1>Helo {fname} {lname}</h1>
-    //     {/* <h1>Helo {`${fname} ${lname}`}</h1> */}
-    // <p>Welcome To The Website </p>
-    // <p>Your Lucky Number is {luck} </p>
-    // <p>Your Random Number is {Math.floor(Math.random()*10)} </p>
-    // </div>
+    <div>
+      <Heading />
+      <List />
+      {/* <h1>Helo {fname +" "+ lname}</h1> */}
+      <h1>Helo {fname} {lname}</h1>
+      {/* <h1>Helo {`${fname} ${lname}`}</h1> */}
+      <Paragraph luck={luck}></Paragraph>
+    </div>
     //     <div>
     //       <footer>
     // <p>Created By {fname} {lname}.</p>
@@ -59,8 +83,10 @@ function App() {
     // </div>
 
     //inline css
-    <h1 style={customCss}>Hello Mr. Sdey</h1>
+    // <h1 style={customCss}>Hello Mr. Sdey</h1>
 
+    //try the challange
+    // <h1 className='heading2' style={custGreet}>{greeting}</h1>
 
   )
 }
