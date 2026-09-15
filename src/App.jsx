@@ -6,6 +6,7 @@ import './App.css'
 import Greet from './components/Greetings'
 import Photo from './components/Photo'
 import Info from './components/Info'
+import Cal from './components/calculate'
 
 
 let fname = "S";
@@ -34,7 +35,7 @@ function App() {
       <Greet />
       <Photo />
       <Info fname={fname} lname={lname} luck={luck} currentYear={currentYear} />
-
+      <Cal />
     </div>
   )
 }
