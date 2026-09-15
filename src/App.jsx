@@ -7,6 +7,7 @@ import Greet from './components/Greetings'
 import Photo from './components/Photo'
 import Info from './components/Info'
 import Cal from './components/calculate'
+import Keeper from './components/KeeperAppPrj/Keeper'
 
 
 let fname = "S";
@@ -32,10 +33,11 @@ function App() {
   return (
     // <h1 style={customCss}>Hello Mr. Sdey</h1>    //inline css
     <div>
-      <Greet />
+      {/* <Greet />
       <Photo />
       <Info fname={fname} lname={lname} luck={luck} currentYear={currentYear} />
-      <Cal />
+      <Cal /> */}
+      <Keeper />
     </div>
   )
 }

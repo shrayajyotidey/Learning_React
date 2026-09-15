@@ -1,0 +1,23 @@
+.pnote{
+    font-weight: 600;
+    font-size: large;
+}
+
+h1{
+    display: flex;
+    background-color: rgb(255, 208, 0);
+    color: white;
+    padding: 10px;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+footer{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
