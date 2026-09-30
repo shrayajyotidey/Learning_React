@@ -8,6 +8,7 @@ import Photo from './components/Photo'
 import Info from './components/Info'
 import Cal from './components/calculate'
 import Keeper from './components/KeeperAppPrj/Keeper'
+import Contacts_Props from './components/level2/props_contact'
 
 
 let fname = "S";
@@ -37,7 +38,8 @@ function App() {
       <Photo />
       <Info fname={fname} lname={lname} luck={luck} currentYear={currentYear} />
       <Cal /> */}
-      <Keeper />
+      {/* <Keeper /> */}
+      <Contacts_Props/>
     </div>
   )
 }
